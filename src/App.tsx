@@ -15,19 +15,19 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
-      <div className="min-h-screen flex flex-col px-4 py-4">
+    <div className="min-h-screen w-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
+      <div className="flex-1 flex flex-col px-4 py-4 pt-8">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8">
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4">
-            <div className="p-2 sm:p-3 bg-green-100 rounded-lg">
+            {/* <div className="p-2 sm:p-3 bg-green-100 rounded-lg">
               <Code2 className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />
-            </div>
+            </div> */}
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
               LeetCode Progress Tracker
             </h1>
           </div>
-          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
+          <p className="text-sm sm:text-base lg:text-lg max-w-2xl mx-auto px-2">
             Track your LeetCode journey and visualize your problem-solving progress across all difficulty levels.
           </p>
         </div>

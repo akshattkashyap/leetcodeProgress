@@ -54,7 +54,7 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({
             style={{ 
               width: `${animatedProgress}%`,
               backgroundColor: color,
-              borderRadius: '0.375rem'
+              borderRadius: '0rem'
             }}
           />
         </div>
