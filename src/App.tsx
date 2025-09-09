@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Code2 } from 'lucide-react';
 import { SearchForm } from '@/components/SearchForm';
 import { ProgressCard } from '@/components/ProgressCard';
