@@ -16,7 +16,6 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({
   solved,
   total,
   color,
-  bgColor,
   delay
 }) => {
   const [animatedProgress, setAnimatedProgress] = React.useState(0);
