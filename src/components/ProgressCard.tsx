@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect, FC } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 
@@ -11,17 +11,17 @@ interface ProgressCardProps {
   delay: number;
 }
 
-export const ProgressCard: React.FC<ProgressCardProps> = ({
+export const ProgressCard: FC<ProgressCardProps> = ({
   title,
   solved,
   total,
   color,
   delay
 }) => {
-  const [animatedProgress, setAnimatedProgress] = React.useState(0);
+  const [animatedProgress, setAnimatedProgress] = useState(0);
   const percentage = total > 0 ? Math.round((solved / total) * 100) : 0;
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setTimeout(() => {
       setAnimatedProgress(percentage);
     }, delay);

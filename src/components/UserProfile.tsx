@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { User, Trophy } from 'lucide-react';
 
@@ -7,7 +7,7 @@ interface UserProfileProps {
   totalSolved: number;
 }
 
-export const UserProfile: React.FC<UserProfileProps> = ({ username, totalSolved }) => {
+export const UserProfile: FC<UserProfileProps> = ({ username, totalSolved }) => {
   return (
     <Card className="w-full bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
       <CardHeader className="text-center pb-3 sm:pb-4">

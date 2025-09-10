@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC, FormEvent } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Search, Loader2 } from 'lucide-react';
@@ -10,13 +10,13 @@ interface SearchFormProps {
   loading: boolean;
 }
 
-export const SearchForm: React.FC<SearchFormProps> = ({
+export const SearchForm: FC<SearchFormProps> = ({
   username,
   setUsername,
   onSearch,
   loading
 }) => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     onSearch();
   };

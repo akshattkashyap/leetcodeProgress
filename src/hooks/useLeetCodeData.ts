@@ -34,7 +34,7 @@ export const useLeetCodeData = () => {
       const processedData: ProcessedStats = {
         easy: {
           solved: result.easySolved,
-          total: result.totalSubmissionNum.find(item => item.difficulty === 'All')?.count || 0
+          total: 0
         },
         medium: {
           solved: result.mediumSolved,
@@ -47,12 +47,9 @@ export const useLeetCodeData = () => {
         totalSolved: result.solvedProblem
       };
 
-      // Calculate approximate totals based on typical LeetCode distribution
-      // This is an approximation since the API doesn't provide exact totals per difficulty
-      const totalProblems = 3000; // Approximate total LeetCode problems
-      processedData.easy.total = Math.round(totalProblems * 0.5); // ~50% easy
-      processedData.medium.total = Math.round(totalProblems * 0.35); // ~35% medium
-      processedData.hard.total = Math.round(totalProblems * 0.15); // ~15% hard
+      processedData.easy.total = 896 
+      processedData.medium.total = 1914
+      processedData.hard.total = 867 
 
       setData(processedData);
     } catch (err) {

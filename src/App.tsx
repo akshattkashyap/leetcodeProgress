@@ -83,12 +83,12 @@ function App() {
               />
             </div>
 
-            {/* Summary */}
-            <div className="text-center pt-4 sm:pt-6 border-t border-gray-200 mt-auto">
+            {/* Summary
+              <div className="text-center pt-4 sm:pt-6 border-t border-gray-200 mt-auto">
               <p className="text-sm sm:text-base text-muted-foreground px-4">
                 Keep up the great work! Every problem solved is a step forward in your coding journey.
               </p>
-            </div>
+            </div> */}
           </div>
         )}
 
