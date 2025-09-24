@@ -8,10 +8,12 @@ import { useLeetCodeData } from '@/hooks/useLeetCodeData';
 
 function App() {
   const [username, setUsername] = useState('');
+  const [finaluser, setFinalUser] = useState('');
   const { loading, error, data, fetchUserData } = useLeetCodeData();
 
   const handleSearch = () => {
     fetchUserData(username);
+    setFinalUser(username);
   };
 
   return (
@@ -20,7 +22,8 @@ function App() {
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8">
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4">
-            {/* <div className="p-2 sm:p-3 bg-green-100 rounded-lg">
+            {/* icon
+              <div className="p-2 sm:p-3 bg-green-100 rounded-lg">
               <Code2 className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />
             </div> */}
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
@@ -53,7 +56,7 @@ function App() {
         {data && (
           <div className="flex-1 space-y-4 sm:space-y-6">
             {/* User Profile */}
-            <UserProfile username={username} totalSolved={data.totalSolved} />
+            <UserProfile username={finaluser} totalSolved={data.totalSolved} />
 
             {/* Progress Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
