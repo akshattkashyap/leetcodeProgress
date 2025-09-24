@@ -47,9 +47,9 @@ export const useLeetCodeData = () => {
         totalSolved: result.solvedProblem
       };
 
-      processedData.easy.total = 896 
-      processedData.medium.total = 1914
-      processedData.hard.total = 867 
+      processedData.easy.total = 901 
+      processedData.medium.total = 1920
+      processedData.hard.total = 870
 
       setData(processedData);
     } catch (err) {
