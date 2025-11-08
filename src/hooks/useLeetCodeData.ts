@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { LeetCodeStats, ProcessedStats } from '@/types/leetcode';
+import { LEETCODE_TOTALS } from '@/lib/utils'
 
 export const useLeetCodeData = () => {
   const [loading, setLoading] = useState(false);
@@ -34,22 +35,18 @@ export const useLeetCodeData = () => {
       const processedData: ProcessedStats = {
         easy: {
           solved: result.easySolved,
-          total: 0
+          total: LEETCODE_TOTALS.easy
         },
         medium: {
           solved: result.mediumSolved,
-          total: 0
+          total: LEETCODE_TOTALS.medium
         },
         hard: {
           solved: result.hardSolved,
-          total: 0
+          total: LEETCODE_TOTALS.hard
         },
         totalSolved: result.solvedProblem
       };
-
-      processedData.easy.total = 910
-      processedData.medium.total = 1944
-      processedData.hard.total = 881
 
       setData(processedData);
     } catch (err) {
